@@ -12,4 +12,9 @@ class Vehicle extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
+    public function workOrders()
+    {
+        return $this->hasMany(WorkOrder::class);
+    }
 }
